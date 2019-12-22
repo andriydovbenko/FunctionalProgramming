@@ -1,6 +1,7 @@
 package com.cursor.operation;
 
 import com.cursor.operation.lambda.PrimeNumber;
+import com.cursor.operation.users.UsersData;
 
 public class Execution {
     public void start() {
@@ -11,5 +12,8 @@ public class Execution {
         System.out.println("Number: " + numberSecond + " is prime? =" + new PrimeNumber().isPrime(numberSecond));
         System.out.println("Number: " + numberThird + " is prime? =" + new PrimeNumber().isPrime(numberThird));
 
+        UsersData usersData = new UsersData();
+        usersData.showAllUsers();
+        usersData.filterUser();
     }
 }
