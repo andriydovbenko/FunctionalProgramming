@@ -8,4 +8,12 @@ public class Film {
         this.ticketPrice = ticketPrice;
         this.genre = genre;
     }
+
+    public float getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
 }
