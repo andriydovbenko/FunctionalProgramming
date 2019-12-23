@@ -1,15 +1,15 @@
 package com.cursor.operation.film;
 
 public class Film {
-    private float ticketPrice;
+    private double ticketPrice;
     private String genre;
 
-    public Film(float ticketPrice, String genre) {
-        this.ticketPrice = ticketPrice;
-        this.genre = genre;
+    public Film(String[] genreAndPrice) {
+        this.genre = genreAndPrice[0];
+        this.ticketPrice = Double.parseDouble(genreAndPrice[1]);
     }
 
-    public float getTicketPrice() {
+    public double getTicketPrice() {
         return ticketPrice;
     }
 
