@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class UsersData {
     private final int YEAR = 2019;
     private final int MONTH = 12;
-    private final int DAY = 15;
+    private final int DAY = 14;
     private List<User> userList = new ArrayList<>();
 
     public UsersData() {
@@ -48,7 +48,7 @@ public class UsersData {
         listf.forEach((key, value) -> {
             System.out.println("\nTeam: " + key);
             System.out.print("emails:\n");
-            value.forEach(System.out::println);
+            value.forEach(User -> System.out.println(User.getEmail()));
         });
     }
 }
