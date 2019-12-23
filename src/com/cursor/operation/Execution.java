@@ -1,5 +1,6 @@
 package com.cursor.operation;
 
+import com.cursor.operation.film.FilmsCollection;
 import com.cursor.operation.lambda.PrimeNumber;
 import com.cursor.operation.users.UsersData;
 
@@ -15,5 +16,8 @@ public class Execution {
         UsersData usersData = new UsersData();
         usersData.showAllUsers();
         usersData.filterUsers();
+
+        FilmsCollection filmsCollection = new FilmsCollection();
+        filmsCollection.findAveragePriceByGenre();
     }
 }
