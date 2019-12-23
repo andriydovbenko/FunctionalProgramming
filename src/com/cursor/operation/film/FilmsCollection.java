@@ -12,10 +12,10 @@ public class FilmsCollection {
     private List<Film> filmsTomorrow = new ArrayList<>();
 
     public FilmsCollection() {
-        crateCollection();
+        createCollection();
     }
 
-    private void crateCollection() {
+    private void createCollection() {
         filmsToday.add(new Film(Films.THUNDERBALL.getGenreAndPrice()));
         filmsToday.add(new Film(Films.SPECTRE.getGenreAndPrice()));
         filmsToday.add(new Film(Films.SLAPSTICK.getGenreAndPrice()));
