@@ -40,7 +40,7 @@ public class UsersData {
                 " team: " + x.getTeam() + " last logged: " + x.getLoginDate()));
     }
 
-    public void filterUser() {
+    public void filterUsers() {
         System.out.println("\nEmails of user who logged less than week age grouped by team:");
         Map<String, List<User>> listf = userList.stream()
                 .filter(login -> login.getLoginDate().getDayOfMonth() >= (DAY - 7))

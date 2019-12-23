@@ -14,6 +14,6 @@ public class Execution {
 
         UsersData usersData = new UsersData();
         usersData.showAllUsers();
-        usersData.filterUser();
+        usersData.filterUsers();
     }
 }
