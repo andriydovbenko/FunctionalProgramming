@@ -41,7 +41,10 @@ public class FilmsCollection {
         mainCollection.collect(Collectors.groupingBy(Film::getGenre)).forEach((key, value) -> {
             System.out.println("\nFilms genre: " + key);
             System.out.println("Average ticket's price =");
-            System.out.println(value.stream().mapToDouble(Film::getTicketPrice).average().orElse(0));
+            System.out.println(value.stream()
+                    .mapToDouble(Film::getTicketPrice)
+                    .average().orElse(0));
+            System.out.println("amount: " + value.size());
         });
     }
 }
