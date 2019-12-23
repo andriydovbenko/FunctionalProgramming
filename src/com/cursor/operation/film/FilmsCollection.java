@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class FilmsCollection {
-
     private List<Film> filmsToday = new ArrayList<>();
     private List<Film> filmsTomorrow = new ArrayList<>();
 
