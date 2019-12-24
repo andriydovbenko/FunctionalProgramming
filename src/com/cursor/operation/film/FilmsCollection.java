@@ -11,7 +11,6 @@ import java.util.stream.Stream;
 public class FilmsCollection {
     private List<Film> filmsToday = new ArrayList<>();
     private List<Film> filmsTomorrow = new ArrayList<>();
-    private Map<String, List<Film>> groupedMapOfFilmsByGenre;
 
     public FilmsCollection() {
         createCollection();
@@ -38,19 +37,17 @@ public class FilmsCollection {
     }
 
     public void findAveragePriceByGenre() {
-        this.groupedMapOfFilmsByGenre = Stream.concat(filmsToday.stream(), filmsTomorrow.stream()).
-                collect(Collectors.groupingBy(Film::getGenre));
-        showAveragePriceByPrice();
+        Stream.concat(filmsToday.stream(), filmsTomorrow.stream()).
+                collect(Collectors.groupingBy(Film::getGenre))
+                .forEach(this::showAveragePriceByPrice);
     }
 
-    private void showAveragePriceByPrice() {
-        groupedMapOfFilmsByGenre.forEach((key, value) -> {
-            System.out.println("\nFilms genre: " + key);
-            System.out.println("Average ticket's price =");
-            System.out.println(value.stream()
-                    .mapToDouble(Film::getTicketPrice)
-                    .average().orElse(0));
-            System.out.println("amount: " + value.size());
-        });
+    private void showAveragePriceByPrice(String key, List<Film> value) {
+        System.out.println("\nFilms genre: " + key);
+        System.out.println("Average ticket's price =");
+        System.out.println(value.stream()
+                .mapToDouble(Film::getTicketPrice)
+                .average().orElse(0));
+        System.out.println("amount: " + value.size());
     }
 }
