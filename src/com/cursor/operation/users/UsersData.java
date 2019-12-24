@@ -1,7 +1,7 @@
 package com.cursor.operation.users;
 
-import com.cursor.operation.enums.Email;
-import com.cursor.operation.enums.Team;
+import com.cursor.operation.users.information.Email;
+import com.cursor.operation.users.information.Team;
 
 import java.time.LocalDate;
 import java.util.*;

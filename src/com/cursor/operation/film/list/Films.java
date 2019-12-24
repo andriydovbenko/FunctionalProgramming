@@ -1,4 +1,4 @@
-package com.cursor.operation.enums;
+package com.cursor.operation.film.list;
 
 public enum Films {
 
