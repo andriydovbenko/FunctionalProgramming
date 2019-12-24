@@ -4,12 +4,14 @@ import com.cursor.operation.film.list.Films;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class FilmsCollection {
     private List<Film> filmsToday = new ArrayList<>();
     private List<Film> filmsTomorrow = new ArrayList<>();
+    private Map<String, List<Film>> groupedMapOfFilmsByGenre;
 
     public FilmsCollection() {
         createCollection();
@@ -36,8 +38,13 @@ public class FilmsCollection {
     }
 
     public void findAveragePriceByGenre() {
-        Stream<Film> mainCollection = Stream.concat(filmsToday.stream(), filmsTomorrow.stream());
-        mainCollection.collect(Collectors.groupingBy(Film::getGenre)).forEach((key, value) -> {
+        this.groupedMapOfFilmsByGenre = Stream.concat(filmsToday.stream(), filmsTomorrow.stream()).
+                collect(Collectors.groupingBy(Film::getGenre));
+        showAveragePriceByPrice();
+    }
+
+    private void showAveragePriceByPrice() {
+        groupedMapOfFilmsByGenre.forEach((key, value) -> {
             System.out.println("\nFilms genre: " + key);
             System.out.println("Average ticket's price =");
             System.out.println(value.stream()
