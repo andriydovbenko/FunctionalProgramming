@@ -42,10 +42,10 @@ public class UsersData {
 
     public void filterUsers() {
         System.out.println("\nEmails of user who logged less than week age grouped by team:");
-        Map<String, List<User>> listf = userList.stream()
+        Map<String, List<User>> usersGroupedByTeam = userList.stream()
                 .filter(login -> login.getLoginDate().getDayOfMonth() >= (DAY - 7))
                 .collect(Collectors.groupingBy(User::getTeam));
-        listf.forEach((key, value) -> {
+        usersGroupedByTeam.forEach((key, value) -> {
             System.out.println("\nTeam: " + key);
             System.out.print("emails:\n");
             value.forEach(User -> System.out.println(User.getEmail()));
