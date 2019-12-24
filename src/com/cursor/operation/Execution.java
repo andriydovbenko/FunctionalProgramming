@@ -2,7 +2,7 @@ package com.cursor.operation;
 
 import com.cursor.operation.film.FilmsCollection;
 import com.cursor.operation.prime.PrimeNumberAuditor;
-import com.cursor.operation.users.UsersData;
+import com.cursor.operation.user.UsersData;
 
 public class Execution {
 
