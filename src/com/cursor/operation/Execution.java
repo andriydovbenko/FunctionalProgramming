@@ -1,7 +1,7 @@
 package com.cursor.operation;
 
 import com.cursor.operation.film.FilmsCollection;
-import com.cursor.operation.lambda.PrimeNumber;
+import com.cursor.operation.prime.PrimeNumber;
 import com.cursor.operation.users.UsersData;
 
 public class Execution {
