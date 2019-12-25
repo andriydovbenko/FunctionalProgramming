@@ -1,4 +1,4 @@
-package com.cursor.operation.prime;
+package com.cursor.operation.functional;
 
 public class SquareRootAuditor {
 
