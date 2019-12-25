@@ -1,6 +1,6 @@
 package com.cursor.operation.film.list;
 
-public enum Films {
+public enum Film {
 
     THUNDERBALL("Action", "20.20"),
     SPECTRE("Action", "18.60"),
@@ -21,7 +21,7 @@ public enum Films {
 
     private String[] genreAndPrice;
 
-    Films(String genre, String price) {
+    Film(String genre, String price) {
         this.genreAndPrice = new String[]{genre, price};
     }
 
