@@ -1,4 +1,4 @@
-package com.cursor.operation.user.information;
+package com.cursor.operation.user.information.general;
 
 public enum Team {
 

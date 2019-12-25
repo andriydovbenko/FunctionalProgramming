@@ -1,4 +1,4 @@
-package com.cursor.operation.user.information;
+package com.cursor.operation.user.information.personal;
 
 public enum Email {
     PETRO("petro@gmail.com"),
